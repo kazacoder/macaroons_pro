@@ -77,3 +77,8 @@ body {
     font-family: GilroyBold, sans-serif;
     color: rgb(255, 255, 255);
 }
+
+.main-content {
+    margin-top: 126px;
+    display: flex;
+}
