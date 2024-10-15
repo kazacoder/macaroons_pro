@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: GilroyBold;
+    src: url("../fonts/gilroy-bold.ttf");
+}
+
+@font-face {
+    font-family: GilroyEctraBold;
+    src: url("../fonts/gilroy-extrabold.ttf");
+}
+
+@font-face {
+    font-family: GilroyMedium;
+    src: url("../fonts/gilroy-medium.ttf");
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url("../fonts/gilroy-regular.ttf");
+}
+
+@font-face {
+    font-family: Tavolga;
+    src: url("../fonts/Tavolga_Free.ttf");
+}
+
+body {
+    font-family: Gilroy, sans-serif;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.main {
+    background: #eba8b1;
+}
+
+.header {
+    padding: 36px 0 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__list {
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 40px;
+    margin-left: -114px;;
+}
+
+.menu__link {
+    text-decoration: none;
+    font-family: GilroyMedium, sans-serif;
+    font-size: 14px;
+    color: rgb(119, 11, 29);
+    padding-bottom: 3px;
+    box-sizing: border-box;
+    border-bottom: 2px solid transparent;
+}
+
+.menu__link:hover {
+    border-color: #821328;
+}
+
+.phone {
+    font-size: 16px;
+    font-family: GilroyBold, sans-serif;
+    color: rgb(255, 255, 255);
+}
