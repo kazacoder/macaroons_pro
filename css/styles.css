@@ -46,7 +46,8 @@ body {
 .header {
     padding: 36px 0 25px 0;
     display: flex;
-    justify-content: space-between;
+    position: relative;
+    justify-content: start;
     align-items: center;
 }
 
@@ -55,17 +56,19 @@ body {
     display: grid;
     grid-auto-flow: column;
     gap: 40px;
-    margin-left: -114px;;
+    margin-left: 233px;
 }
 
 .menu__link {
     text-decoration: none;
     font-family: GilroyMedium, sans-serif;
     font-size: 14px;
+    letter-spacing: 0.45px;
     color: rgb(119, 11, 29);
     padding-bottom: 3px;
     box-sizing: border-box;
     border-bottom: 2px solid transparent;
+    transition: border-color .3s ease;
 }
 
 .menu__link:hover {
@@ -76,9 +79,64 @@ body {
     font-size: 16px;
     font-family: GilroyBold, sans-serif;
     color: rgb(255, 255, 255);
+    letter-spacing: 0.2px;
+    position: absolute;
+    right: 0;
 }
 
 .main-content {
-    margin-top: 126px;
+    padding-bottom: 107px;
+    margin-top: 124px;
     display: flex;
+    justify-content: space-between;
+}
+
+.main-content__title {
+    padding-top: 16px;
+    font-size: 55px;
+    font-family: Tavolga, sans-serif;
+    color: rgb(255, 255, 255);
+    line-height: 60px;
+}
+
+.main-content__text {
+    font-size: 18px;
+    font-family: Tavolga, sans-serif;
+    color: rgb(255, 255, 255);
+    line-height: 25px;
+    width: 360px;
+    margin-top: 52px;
+}
+
+.main-content__actions {
+    margin-top: 82px;
+}
+
+.btn {
+    background-image: -moz-linear-gradient( 90deg, rgb(113,8,30) 0%, rgb(215,72,92) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(113,8,30) 0%, rgb(215,72,92) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(113,8,30) 0%, rgb(215,72,92) 100%);
+    font-family: GilroyBold, sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border: none;
+    border-radius: 30px;
+    line-height: 1;
+    cursor: pointer;
+    transition: box-shadow .3s ease;
+}
+
+.btn:hover {
+    box-shadow: 0px 5px 9px 1px rgba(130, 19, 40, 0.5);
+}
+
+.main__btn {
+    width: 240px;
+    font-size: 18px;
+    padding: 20px 20px;
+    height: 60px;
+}
+
+.main-content__image {
+    margin-right: 20px;
 }
