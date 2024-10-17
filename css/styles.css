@@ -443,3 +443,104 @@ body {
     color: rgb(255, 255, 255);
     margin-top: 6px;
 }
+
+
+.present_hover {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1920px;
+    height: 3303px;
+    z-index: 159;
+
+}
+.gift {
+    position: fixed;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 30px;
+    right: 30px;
+    width: 90px;
+    height: 90px;
+    z-index: 4;
+    background: radial-gradient(#71081e, #d7485c);
+    transition: box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.gift:hover {
+    box-shadow: 0px 0px 12.6px 2.4px rgba(130, 19, 40, 0.5);
+}
+
+.gift:hover .gift-message {
+
+    background-color: rgb(254, 239, 238);
+    border-color: rgb(119, 10, 29);
+    color: rgb(119, 10, 29);
+}
+
+.gift:hover .gift-block {
+    visibility: visible;
+    opacity: 1;
+    bottom: 0;
+    /*transform: translate(0, 100%);*/
+}
+
+/*.gift:hover::after {*/
+/*    transform: translate(0, 0) rotate(45deg);*/
+/*    background-color: rgb(254, 239, 238);*/
+/*    border-color: rgb(119, 10, 29);*/
+/*    color: rgb(119, 10, 29);*/
+/*}*/
+
+.gift-message {
+    border-width: 2px;
+    /*border-color: transparent;*/
+    border-style: solid;
+    border-radius: 10px;
+    /*background-color: transparent;*/
+    position: absolute;
+    bottom: 45px;
+    right: 137px;
+    width: 168px;
+    height: 60px;
+    z-index: -10;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: GilroyMedium, sans-serif;
+    /*color: transparent;*/
+    line-height: 1.333  ;
+    background-color: rgb(254, 239, 238);
+    border-color: rgb(119, 10, 29);
+    color: rgb(119, 10, 29);
+    /*transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.5s ease;*/
+
+}
+
+.gift-block {
+    visibility: hidden;
+    opacity: 0;
+    /*transform: translate(0, 100%);*/
+    transition: opacity .3s ease-out, bottom .3s ease-in;
+    position: fixed;
+    bottom: -50px;
+    right: 0;
+}
+
+.gift-angle {
+    border-width: 2px 2px 0 0;
+    border-color: rgb(119, 10, 29);
+    border-style: solid;
+    background-color: rgb(254, 239, 238);
+    position: absolute;
+    bottom: 68px;
+    right: 130px;
+    width: 13px;
+    height: 13px;
+    z-index: 11;
+    transform: translate(0, 0) rotate(45deg);
+}
+
