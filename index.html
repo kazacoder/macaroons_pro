@@ -19,17 +19,20 @@
             <div class="menu">
                 <ul class="menu__list">
                     <li class="menu__item">
-                        <a href="#" class="menu__link">Пироженки</a>
+                        <a onclick="goToAnchor('products')" class="menu__link">Пироженки</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">О нас</a>
+                        <a onclick="goToAnchor('about')" href="#" class="menu__link">О нас</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">Оформить заказ</a>
+                        <a onclick="goToAnchor('order')" href="#" class="menu__link">Оформить заказ</a>
                     </li>
                 </ul>
             </div>
             <div class="phone header__phone">+375 (29) 368-98-68</div>
+            <div class="burger-menu">
+                <img src="images/burger_menu.png" alt="Burger menu">
+            </div>
         </header>
         <div class="main-content">
             <div class="main-content__info">
@@ -56,7 +59,7 @@
     <div class="container advantages__container">
         <div class="advantages-content">
             <div class="advantages__content">
-                <h2 class="advantages__title">
+                <h2 class="advantages__title" id="about">
                     Мы печём для вас вкуснейшие макаруны уже более 10 лет
                 </h2>
                 <p class="advantages__text">
@@ -107,7 +110,7 @@
 
 <section class="products">
     <div class="container products__container">
-        <h2 class="products__title">Выберите свой макарун</h2>
+        <h2 class="products__title" id="products">Выберите свой макарун</h2>
         <div class="products__wrapper">
             <div class="product-container">
                 <div class="product-container__image">
@@ -181,7 +184,7 @@
             <img class="orders__images-strawberry-small" src="images/strawberry_small.png" alt="Клубничка маленькая">
         </div>
         <div class="order__content">
-            <h2 class="order__title">Закажите макарун!</h2>
+            <h2 class="order__title" id="order">Закажите макарун!</h2>
             <p class="order__text">
                 Выберите понравившийся макарун, заполните форму и ожидайте звонка нашего пекаря!
             </p>
@@ -200,17 +203,17 @@
 
 <footer class="footer">
     <div class="container footer__container">
-        <div class="logo">
+        <div class="logo footer__logo">
             <a href="#"><img src="images/logo.png" alt="Logo"></a>
-            <div class="logo__text">Все права защищены, 2020</div>
         </div>
+        <div class="logo__text">Все права защищены, 2020</div>
         <a href="" class="social">
             <div class="social__image">
                 <img src="images/instagram.png" alt="Instagram">
             </div>
             <div class="social__text">Мы в Instagram</div>
         </a>
-        <div class="phone">+375 (29) 368-98-68</div>
+        <div class="phone footer__phone">+375 (29) 368-98-68</div>
     </div>
 </footer>
 <a href="#" class="gift">
@@ -223,4 +226,13 @@
     </div>
 </a>
 </body>
+
+<script>
+
+goToAnchor = function (id) {
+    document.getElementById(id).scrollIntoView({behavior: "smooth"})
+}
+
+</script>
+
 </html>
