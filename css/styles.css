@@ -153,7 +153,8 @@ body {
 }
 
 .main-content__info {
-    z-index: 10;
+    z-index: 1;
+    position: relative;
 }
 
 .main-content__title {
