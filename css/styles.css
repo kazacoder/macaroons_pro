@@ -52,6 +52,33 @@ body {
     align-items: center;
 }
 
+.menu {
+    z-index: 12;
+    transition: opacity 0.5s ease;
+}
+
+.menu.open {
+    display: flex;
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.menu__close {
+    display: none;
+    width: 40px;
+    height: 40px;
+    fill: #ffefef;
+    position: absolute;
+    top: 28px;
+    right: 20px;
+    transform: rotate(-45deg);
+    transition: transform 0.5s ease;
+}
+
+.menu__close.rotated {
+    transform: rotate(0deg);
+}
+
 .menu__list {
     list-style: none;
     display: grid;
@@ -80,6 +107,31 @@ body {
 .burger-menu {
     display: none;
 }
+
+.burger-menu {
+    width: 40px;
+    height: 22px;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.burger-menu.pressed {
+    padding-top: 8px;
+    transform: rotate(45deg);
+    gap: 0;
+}
+
+.burger-menu__line{
+    width: 40px;
+    height: 2px;
+    border: 1px solid #821328;
+    box-sizing: border-box;
+}
+
 
 .phone {
     font-size: 16px;
@@ -374,11 +426,13 @@ body {
 }
 
 .order__container {
+    position: relative;
     display: flex;
     grid-template-columns: 1fr 1fr;
     padding-top: 98px;
     padding-bottom: 120px;
     column-gap: 161px;
+    z-index: 1;
 }
 
 .order__images {
@@ -425,7 +479,7 @@ body {
 .order__form {
     display: flex;
     flex-direction: column;
-    z-index: 100;
+    z-index: 8;
 }
 
 .order__label {
@@ -523,15 +577,7 @@ body {
     grid-row: 1 / 3;
 }
 
-.present_hover {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 1920px;
-    height: 3303px;
-    z-index: 159;
 
-}
 .gift {
     position: fixed;
     border-radius: 50%;
@@ -545,7 +591,7 @@ body {
     z-index: 4;
     background: radial-gradient(#71081e, #d7485c);
     transition: box-shadow 0.3s ease;
-    overflow: hidden;
+    cursor: pointer;
 }
 
 .gift:hover {
