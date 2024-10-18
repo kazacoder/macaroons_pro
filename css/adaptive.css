@@ -240,7 +240,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 40px;
+        gap: 38px;
     }
 
     .logo__text, .footer__logo {
@@ -296,3 +296,156 @@
         display: flex;
     }
 }
+
+@media screen and (max-width: 425px) {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60px;
+        gap: 38px;
+        padding-bottom: 43px;
+    }
+
+    .main-content__title {
+        text-align: center;
+        font-size: 32px;
+        line-height: 40px;
+        margin: 0 -2px;
+    }
+
+    .main-content__text {
+        text-align: center;
+        font-size: 16px;
+        line-height: 23px;
+        margin-top: 27px;
+    }
+
+    .main-content__actions {
+        text-align: center;
+        margin-top: 35px;
+    }
+
+    .main-content__block {
+        width: 250px;
+        margin: 0;
+    }
+
+    .main-content__circle {
+        width: 189px;
+        height: 189px;
+        top: 11px;
+        right: unset;
+    }
+
+    .main-content__circle2 {
+        width: 212px;
+        height: 212px;
+        top: unset;
+        right: unset;
+    }
+
+    .advantages__container {
+        padding: 95px 15px 64px 15px;
+        column-gap: 15px;
+    }
+
+    .advantages__title {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .advantages__text {
+        font-size: 16px;
+        line-height: 23px;
+        margin: 32px -4px 0 -4px;
+    }
+
+    .advantage {
+        margin: 0;
+    }
+
+    .advantage__title {
+        font-size: 18px;
+        line-height: 1;
+    }
+
+    .advantage__text {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .advantages__image {
+        margin-top: 18px;
+        margin-bottom: 12px;
+    }
+
+    .products__container {
+        padding-bottom: 100px;
+        padding-top: 100px;
+    }
+
+    .products__title {
+        font-size: 30px;
+        line-height: 35px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .order__container {
+        padding-top: 100px;
+        padding-bottom: 77px;
+    }
+
+    .order__title {
+        font-size: 30px;
+        line-height: 35px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .order__text {
+        font-size: 16px;
+        line-height: 23px;
+        margin-bottom: 15px;
+    }
+
+    .order__image-stack, .orders__images-strawberry-small {
+        display: none;
+    }
+
+    .order__images-strawberry {
+        top: -127px;
+        right: 0;
+    }
+
+    .order__input, .order__btn {
+        width: 100%;
+    }
+
+    .gift {
+        width: 80px;
+        height: 80px;
+    }
+
+    .gift_image {
+        width: 47px;
+    }
+
+    .gift-block {
+        right: -5px;
+    }
+
+    .gift-message {
+        bottom: 40px;
+    }
+
+    .gift-angle {
+        bottom: 63px;
+    }
+}
+

@@ -69,8 +69,8 @@ body {
     height: 40px;
     fill: #ffefef;
     position: absolute;
-    top: 28px;
-    right: 20px;
+    top: 25px;
+    right: 15px;
     transform: rotate(-45deg);
     transition: transform 0.5s ease;
 }
@@ -172,7 +172,7 @@ body {
     font-style: normal;
     color: rgb(255, 255, 255);
     line-height: 25px;
-    width: 360px;
+    max-width: 360px;
     margin-top: 52px;
 }
 
@@ -420,6 +420,7 @@ body {
 .product__btn {
     width: 130px;
     height: 50px;
+    font-size: 16px;
 }
 
 .order {
@@ -517,6 +518,7 @@ body {
 .order__btn {
     width: 294px;
     height: 60px;
+    font-size: 18px;
 }
 
 .orders__images-strawberry-small {
@@ -606,7 +608,6 @@ body {
 }
 
 .gift:hover .gift-block {
-    visibility: visible;
     opacity: 1;
     bottom: 0;
 }
