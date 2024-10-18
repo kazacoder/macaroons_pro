@@ -430,6 +430,8 @@
     .gift {
         width: 80px;
         height: 80px;
+        bottom: 15px;
+        right: 15px;
     }
 
     .gift_image {
@@ -437,15 +439,15 @@
     }
 
     .gift-block {
-        right: -5px;
+        right: -20px;
     }
 
     .gift-message {
-        bottom: 40px;
+        bottom: 25px;
     }
 
     .gift-angle {
-        bottom: 63px;
+        bottom: 48px;
     }
 }
 

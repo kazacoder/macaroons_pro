@@ -62,7 +62,7 @@
                     Побалуйте себя и своих близких самыми вкусными и ароматными домашними пироженками Macaroon!
                 </p>
                 <div class="main-content__actions">
-                    <button class="btn main__btn">Выбрать макарун</button>
+                    <button class="btn main__btn" onclick="goToAnchor('products')">Выбрать макарун</button>
                 </div>
             </div>
             <div class="main-content__block">
@@ -214,7 +214,7 @@
                 <label class="order__label" for="name">Заполните данные для заказа</label>
                 <input class="order__input" id="name" type="text" placeholder="Ваше имя">
                 <input class="order__input" id="phone" type="text" placeholder="+375 (__) ___ - __ - __">
-                <button type="submit" class="btn order__btn">Оформить заказ</button>
+                <button type="button" class="btn order__btn" id="order__btn">Оформить заказ</button>
             </form>
         </div>
     </div>
@@ -265,6 +265,20 @@ document.querySelectorAll('#menu').forEach((item) => {
         document.getElementById('menu__close').classList.remove('rotated')
     }
 })
+
+let productButtons = document.getElementsByClassName('product__btn')
+
+for (let btn of productButtons) {
+    btn.onclick = function () {
+        alert('Товар добавлен в корзину!')
+    }
+}
+
+document.getElementById('order__btn').onclick = function () {
+    alert('Благодарим за заказ! Мы скоро свяжемся с вами.')
+    document.getElementsByClassName('order__form')[0].reset()
+
+}
 
 </script>
 
