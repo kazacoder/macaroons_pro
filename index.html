@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="dist/lib/magnific-popup/magnific-popup.css">
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/adaptive.css">
@@ -36,13 +37,13 @@
                 </div>
                 <ul class="menu__list">
                     <li class="menu__item">
-                        <a onclick="goToAnchor('products')" class="menu__link">Пироженки</a>
+                        <a id="menu-products" class="menu__link">Пироженки</a>
                     </li>
                     <li class="menu__item">
-                        <a onclick="goToAnchor('about')" class="menu__link">О нас</a>
+                        <a id="menu-about" class="menu__link">О нас</a>
                     </li>
                     <li class="menu__item">
-                        <a onclick="goToAnchor('order')" class="menu__link">Оформить заказ</a>
+                        <a id="menu-order" class="menu__link">Оформить заказ</a>
                     </li>
                 </ul>
             </div>
@@ -62,7 +63,7 @@
                     Побалуйте себя и своих близких самыми вкусными и ароматными домашними пироженками Macaroon!
                 </p>
                 <div class="main-content__actions">
-                    <button class="btn main__btn" onclick="goToAnchor('products')">Выбрать макарун</button>
+                    <button class="btn main__btn" id="main-order">Выбрать макарун</button>
                 </div>
             </div>
             <div class="main-content__block">
@@ -208,22 +209,23 @@
                 <p class="order__text">
                     Выберите понравившийся макарун, заполните форму и ожидайте звонка нашего пекаря!
                 </p>
-                <form class="order__form" action="">
+                <form class="order__form" action="" >
                     <label class="order__label" for="choice">Ваш выбор</label>
-                    <input class="order__input first__input" id="choice" type="text"
+                    <input class="order__input first__input" id="choice" name="choice" type="text" title="Ваш заказ"
                            placeholder="Напишите, что хотите заказать...">
-                    <div class="invalid-feedback">Необходимо ввести...</div>
+                    <div class="invalid-feedback">Необходимо ввести </div>
                     <div class="order-group">
                         <label class="order__label" for="name">Заполните данные для заказа</label>
-                        <input class="order__input" id="name" type="text" placeholder="Ваше имя">
-                        <div class="invalid-feedback">Необходимо ввести...</div>
+                        <input class="order__input" id="name" name="name" type="text" placeholder="Ваше имя" title="Ваше имя">
+                        <div class="invalid-feedback">Необходимо ввести </div>
                     </div>
                     <div class="order-group">
                         <label for="phone"></label>
-                        <input class="order__input" id="phone" type="text" placeholder="+375 (__) ___ - __ - __">
-                        <div class="invalid-feedback">Необходимо ввести...</div>
+                        <input class="order__input" id="phone" name="phone" type="text" placeholder="+7 (___) ___-____"
+                               title="Ваш телефон">
+                        <div class="invalid-feedback">Необходимо ввести </div>
                     </div>
-                    <button type="button" class="btn order__btn" id="order__btn">Оформить заказ</button>
+                    <button class="btn order__btn" id="order__btn">Оформить заказ</button>
                 </form>
             </div>
             <div class="order__success">
@@ -261,40 +263,20 @@
 </div>
 </body>
 
-<script>
 
-    goToAnchor = function (id) {
-        document.getElementById(id).scrollIntoView({behavior: "smooth"})
-    }
+<div id="error-popup" class="error-popup mfp-hide">
+    Popup content
+</div>
 
-    document.getElementById('burger').onclick = function () {
-        document.getElementById('menu').classList.add('open')
-        document.getElementById('burger').classList.add('pressed')
-        document.getElementById('menu__close').classList.add('rotated')
-    }
 
-    document.querySelectorAll('#menu').forEach((item) => {
-        item.onclick = function () {
-            document.getElementById('menu').classList.remove('open')
-            document.getElementById('burger').classList.remove('pressed')
-            document.getElementById('menu__close').classList.remove('rotated')
-        }
-    })
 
-    let productButtons = document.getElementsByClassName('product__btn')
-
-    for (let btn of productButtons) {
-        btn.onclick = function () {
-            alert('Товар добавлен в корзину!')
-        }
-    }
-
-    document.getElementById('order__btn').onclick = function () {
-        alert('Благодарим за заказ! Мы скоро свяжемся с вами.')
-        document.getElementsByClassName('order__form')[0].reset()
-
-    }
-
-</script>
+<!--https://loading.io/css/-->
+<div class="loader">
+    <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
+<script src="dist/lib/jquery/jquery.min.js"></script>
+<script src="dist/lib/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="dist/lib/inputmask/jquery.inputmask.min.js"></script>
+<script src="scripts/script.js"></script>
 
 </html>

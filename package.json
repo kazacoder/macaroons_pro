@@ -10,6 +10,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "jquery": "^3.7.1"
+    "inputmask": "^5.0.9",
+    "jquery": "^3.7.1",
+    "magnific-popup": "^1.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.0"
   }
 }
