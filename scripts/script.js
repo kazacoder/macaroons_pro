@@ -43,7 +43,7 @@ $(document).ready(function () {
         console.log(chosen_product);
         $('#choice').val(chosen_product);
         order.scrollIntoView({behavior: 'smooth'});
-        $('#name').focus()
+        $('#name')[0].focus({preventScroll: true});
     })
 
     // form validation and sending and handling
