@@ -203,19 +203,34 @@
             <img class="orders__images-strawberry-small" src="images/strawberry_small.png" alt="Клубничка маленькая">
         </div>
         <div class="order__content">
-            <h2 class="order__title" id="order">Закажите макарун!</h2>
-            <p class="order__text">
-                Выберите понравившийся макарун, заполните форму и ожидайте звонка нашего пекаря!
-            </p>
-            <form class="order__form" action="">
-                <label class="order__label" for="choice">Ваш выбор</label>
-                <input class="order__input first__input" id="choice" type="text"
-                       placeholder="Напишите, что хотите заказать...">
-                <label class="order__label" for="name">Заполните данные для заказа</label>
-                <input class="order__input" id="name" type="text" placeholder="Ваше имя">
-                <input class="order__input" id="phone" type="text" placeholder="+375 (__) ___ - __ - __">
-                <button type="button" class="btn order__btn" id="order__btn">Оформить заказ</button>
-            </form>
+            <div class="order__wrapper">
+                <h2 class="order__title" id="order">Закажите макарун!</h2>
+                <p class="order__text">
+                    Выберите понравившийся макарун, заполните форму и ожидайте звонка нашего пекаря!
+                </p>
+                <form class="order__form" action="">
+                    <label class="order__label" for="choice">Ваш выбор</label>
+                    <input class="order__input first__input" id="choice" type="text"
+                           placeholder="Напишите, что хотите заказать...">
+                    <div class="invalid-feedback">Необходимо ввести...</div>
+                    <div class="order-group">
+                        <label class="order__label" for="name">Заполните данные для заказа</label>
+                        <input class="order__input" id="name" type="text" placeholder="Ваше имя">
+                        <div class="invalid-feedback">Необходимо ввести...</div>
+                    </div>
+                    <div class="order-group">
+                        <label for="phone"></label>
+                        <input class="order__input" id="phone" type="text" placeholder="+375 (__) ___ - __ - __">
+                        <div class="invalid-feedback">Необходимо ввести...</div>
+                    </div>
+                    <button type="button" class="btn order__btn" id="order__btn">Оформить заказ</button>
+                </form>
+            </div>
+            <div class="order__success">
+                <div class="order__success-text">
+                    Спасибо за Ваш заказ. Мы скоро свяжемся с Вами!
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -248,37 +263,37 @@
 
 <script>
 
-goToAnchor = function (id) {
-    document.getElementById(id).scrollIntoView({behavior: "smooth"})
-}
-
-document.getElementById('burger').onclick = function () {
-    document.getElementById('menu').classList.add('open')
-    document.getElementById('burger').classList.add('pressed')
-    document.getElementById('menu__close').classList.add('rotated')
-}
-
-document.querySelectorAll('#menu').forEach((item) => {
-    item.onclick = function () {
-        document.getElementById('menu').classList.remove('open')
-        document.getElementById('burger').classList.remove('pressed')
-        document.getElementById('menu__close').classList.remove('rotated')
+    goToAnchor = function (id) {
+        document.getElementById(id).scrollIntoView({behavior: "smooth"})
     }
-})
 
-let productButtons = document.getElementsByClassName('product__btn')
-
-for (let btn of productButtons) {
-    btn.onclick = function () {
-        alert('Товар добавлен в корзину!')
+    document.getElementById('burger').onclick = function () {
+        document.getElementById('menu').classList.add('open')
+        document.getElementById('burger').classList.add('pressed')
+        document.getElementById('menu__close').classList.add('rotated')
     }
-}
 
-document.getElementById('order__btn').onclick = function () {
-    alert('Благодарим за заказ! Мы скоро свяжемся с вами.')
-    document.getElementsByClassName('order__form')[0].reset()
+    document.querySelectorAll('#menu').forEach((item) => {
+        item.onclick = function () {
+            document.getElementById('menu').classList.remove('open')
+            document.getElementById('burger').classList.remove('pressed')
+            document.getElementById('menu__close').classList.remove('rotated')
+        }
+    })
 
-}
+    let productButtons = document.getElementsByClassName('product__btn')
+
+    for (let btn of productButtons) {
+        btn.onclick = function () {
+            alert('Товар добавлен в корзину!')
+        }
+    }
+
+    document.getElementById('order__btn').onclick = function () {
+        alert('Благодарим за заказ! Мы скоро свяжемся с вами.')
+        document.getElementsByClassName('order__form')[0].reset()
+
+    }
 
 </script>
 

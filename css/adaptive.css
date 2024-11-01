@@ -423,7 +423,7 @@
         right: 0;
     }
 
-    .order__input, .order__btn {
+    .order__input, .order__btn, .order-group {
         width: 100%;
     }
 
