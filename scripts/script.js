@@ -98,7 +98,8 @@ $(document).ready(function () {
                             items: {
                                 src: '#error-popup'
                             },
-                            type: 'inline'
+                            type: 'inline',
+                            fixedContentPos: true,
                         });
                         loader.hide()
                     }
