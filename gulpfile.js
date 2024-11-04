@@ -24,7 +24,7 @@ gulp.task('assembleProject', function (cb) {
 });
 
 gulp.task('compileLess', function (cb) {
-    gulp.src(['./src/animation.less', './src/styles.less', './src/adaptive.less'])
+    gulp.src(['./src/animation.less', './src/styles.less'])
         .pipe(less())
         .pipe(concatCss('styles.css'))
         .pipe(clean())

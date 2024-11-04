@@ -1,10 +1,4 @@
-@background: #eba8b1;
-@background_second: #ffefef;
-@background_third: #c0707c;
-@border_and_background: #821328;
-@btn_color_1: rgb(113, 8, 30);
-@btn_color_2: rgb(215, 72, 92);
-@circle_color: #9c2338;
+@import "varibles";
 
 
 * {
@@ -35,6 +29,11 @@
 @font-face {
     font-family: Tavolga;
     src: url("../fonts/Tavolga_Free.ttf");
+}
+
+.font-tavolga-normal() {
+    font-family: Tavolga, sans-serif;
+    font-style: normal;
 }
 
 body {
@@ -92,9 +91,9 @@ body {
                     border-bottom: 2px solid transparent;
                     transition: border-color .3s ease;
                     cursor: pointer;
-                }
-                .menu__link:hover {
-                    border-color: @border_and_background;
+                    &:hover {
+                        border-color: @border_and_background;
+                    }
                 }
             }
         }
@@ -140,15 +139,13 @@ body {
             .main-content__title {
                 padding-top: 16px;
                 font-size: 55px;
-                font-family: Tavolga, sans-serif;
-                font-weight: normal;
+                .font-tavolga-normal;
                 color: white;
                 line-height: 60px;
             }
             .main-content__text {
                 font-size: 18px;
-                font-family: Tavolga, sans-serif;
-                font-style: normal;
+                .font-tavolga-normal;
                 color: white;
                 line-height: 25px;
                 max-width: 360px;
@@ -239,8 +236,7 @@ body {
             .advantages__content {
                 .advantages__title {
                     font-size: 45px;
-                    font-family: Tavolga, sans-serif;
-                    font-weight: normal;
+                    .font-tavolga-normal;
                     color: rgb(51, 25, 7);
                     line-height: 55px;
                     max-width: 475px;
@@ -308,8 +304,7 @@ body {
         padding: 120px 0;
         .products__title {
             font-size: 45px;
-            font-family: Tavolga, sans-serif;
-            font-weight: normal;
+            .font-tavolga-normal;
             color: white;
             line-height: 1.222;
             text-align: center;
@@ -351,8 +346,7 @@ body {
                     box-sizing: border-box;
                     .product__title {
                         font-size: 18px;
-                        font-family: Tavolga, sans-serif;
-                        font-weight: normal;
+                        .font-tavolga-normal;
                         color: white;
                     }
                     .product__order {
@@ -384,8 +378,7 @@ body {
 
 .order__title() {
     font-size: 45px;
-    font-family: Tavolga, sans-serif;
-    font-weight: normal;
+    .font-tavolga-normal;
     color: rgb(51, 25, 7);
 }
 
@@ -727,3 +720,7 @@ body {
         opacity: 0.5;
     }
 }
+
+@import "adaptive";
+//@import "animation"; //uncomment for grunt !!!
+@import "theme";
